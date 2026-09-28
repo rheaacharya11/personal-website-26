@@ -21,7 +21,7 @@ export default async function WorkProjectPage({ params }: { params: Promise<{ sl
       <p className="text-xs uppercase tracking-widest mb-3" style={{ fontFamily: "var(--font-sans)", color: "var(--muted)" }}>
         {project.role} · {project.year}
       </p>
-      <h1 className="mb-1 leading-snug" style={{ fontFamily: "DaVinci, var(--font-serif)", fontWeight: 300, fontSize: "clamp(1.6rem, 3vw, 2.2rem)", fontWeight: 700, color: "var(--foreground)", letterSpacing: "0.02em" }}>
+      <h1 className="mb-1 leading-snug" style={{ fontFamily: "DaVinci, var(--font-serif)", fontSize: "clamp(1.6rem, 3vw, 2.2rem)", fontWeight: 700, color: "var(--foreground)", letterSpacing: "0.02em" }}>
         {project.title}
       </h1>
       {project.tagline && (

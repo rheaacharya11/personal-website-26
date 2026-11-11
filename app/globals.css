@@ -87,6 +87,12 @@ body::after {
 }
 
 
+@media (max-width: 767px) {
+  .research-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
 .research-body a {
   text-decoration: underline;
 }

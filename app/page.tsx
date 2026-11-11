@@ -45,13 +45,13 @@ export default function AboutPage() {
           style={{ background: blue }}
         />
         <p style={{ fontSize: "clamp(1.4rem, 2.5vw, 1.9rem)", lineHeight: 1.3, fontFamily: "DaVinci, var(--font-serif)", fontWeight: 300, letterSpacing: "0.02em" }}>
-          With data and design, I make meaning of the world around us. By building products & writing stories, I imagine new ones. Welcome to my studio!
+           Welcome to my studio! With data and design, I make meaning of the world around us. By building products & writing stories, I imagine new ones.
         </p>
         <div style={{ flex: 0.7 }} />
         <nav className="flex flex-col gap-1" style={{ fontFamily: "var(--font-sans)", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.12em" }}>
-          <a href="/research" className="uppercase hover:opacity-60 transition-opacity">Research & Tech {">>>"}</a>
-          <a href="/writing" className="uppercase hover:opacity-60 transition-opacity">Writing {">>>"}</a>
-          <a href="/art" className="uppercase hover:opacity-60 transition-opacity">Art {">>>"}</a>
+          <a href="/research" className="uppercase hover:opacity-60 transition-opacity">↳ Research & Tech</a>
+          <a href="/writing" className="uppercase hover:opacity-60 transition-opacity">↳ Writing</a>
+          <a href="/art" className="uppercase hover:opacity-60 transition-opacity">↳ Art</a>
         </nav>
         <div className="hidden md:block" style={{ flex: 1 }} />
       </section>
@@ -104,7 +104,7 @@ export default function AboutPage() {
             <span style={highlight}>This year</span>
           </h2>
           <p className="leading-relaxed" style={{ fontFamily: "var(--font-source-serif)", fontSize: "0.875rem", color: "#3a6080" }}>
-            Designing voice agents for healthcare & finance @ <a href="https://decagon.ai" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:opacity-70 transition-opacity">Decagon</a>. HCI research on icons in AI interfaces. Using statistics & the right data to create more representative world models for subjective use cases. AI safety research on <a href="/research/rule-following-under-pressure" className="underline underline-offset-2 hover:opacity-70 transition-opacity">conformity</a>. Urging Congress to pass <a href="https://www.palantir.com/assets/xrfr7uokpv1b/1k59iN7rZtJhlRdsiloZgM/0148802926d620cb5f699800d8b37f2f/Protecting_American_Privacy_The_Urgent_Need_for_Congress_to_Act_Final.pdf" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:opacity-70 transition-opacity">better data protection laws</a> w/ Palantir Privacy team. Ran Jersey City Half Marathon.
+            Designing voice agents for healthcare & finance @ <a href="https://decagon.ai" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:opacity-70 transition-opacity">Decagon</a>. HCI research on icons in AI interfaces. Using statistics & the right data to create more representative world models. AI safety research on <a href="/research/rule-following-under-pressure" className="underline underline-offset-2 hover:opacity-70 transition-opacity">conformity</a>. Urging Congress to pass <a href="https://www.palantir.com/assets/xrfr7uokpv1b/1k59iN7rZtJhlRdsiloZgM/0148802926d620cb5f699800d8b37f2f/Protecting_American_Privacy_The_Urgent_Need_for_Congress_to_Act_Final.pdf" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:opacity-70 transition-opacity">better data protection laws</a> w/ Palantir Privacy team. Ran Jersey City Half Marathon.
           </p>
         </div>
         <div>

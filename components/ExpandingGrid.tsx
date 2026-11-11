@@ -25,7 +25,7 @@ export default function ExpandingGrid({ items, title }: { items: GridItem[]; tit
   const toggle = (id: string) => setOpenId((prev) => (prev === id ? null : id));
 
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-3xl mx-auto px-4 md:px-0">
     {title && !isOpen && (
       <h1
         className="text-xs tracking-widest uppercase font-normal mb-6"

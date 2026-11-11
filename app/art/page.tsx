@@ -29,7 +29,7 @@ const palette = [
 
 export default function ArtPage() {
   return (
-    <div className="grid grid-cols-3 gap-3 max-w-2xl mx-auto" style={{ gridAutoFlow: "row dense" }}>
+    <div className="grid grid-cols-3 gap-3 max-w-2xl mx-auto px-4 md:px-0" style={{ gridAutoFlow: "row dense" }}>
       {pieces.map((piece, i) => {
         const { bg, text } = palette[i % palette.length];
         return (

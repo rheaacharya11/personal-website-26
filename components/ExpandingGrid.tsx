@@ -39,7 +39,7 @@ export default function ExpandingGrid({ items, title }: { items: GridItem[]; tit
       <div
         className={`flex-shrink-0 grid gap-3 justify-items-center${isOpen ? " hidden md:grid" : ""}`}
         style={{
-          gridTemplateColumns: isOpen ? "1fr" : "repeat(3, 1fr)",
+          gridTemplateColumns: isOpen ? "1fr" : "repeat(2, 1fr)",
           width: isOpen ? "150px" : "100%",
           maxWidth: isOpen ? "150px" : "42rem",
           margin: isOpen ? "0" : "0 auto",

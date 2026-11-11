@@ -48,7 +48,7 @@ export default function AboutPage() {
           With data and design, I make meaning of the world around us. By building products & writing stories, I imagine new ones. Welcome to my studio!
         </p>
         <div className="flex-1" />
-        <nav className="flex flex-col gap-2" style={{ fontFamily: "var(--font-sans)", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.12em" }}>
+        <nav className="flex flex-col gap-4" style={{ fontFamily: "var(--font-sans)", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.12em" }}>
           <a href="/research" className="uppercase hover:opacity-60 transition-opacity">Research & Tech {">>>"}</a>
           <a href="/writing" className="uppercase hover:opacity-60 transition-opacity">Writing {">>>"}</a>
           <a href="/art" className="uppercase hover:opacity-60 transition-opacity">Art {">>>"}</a>

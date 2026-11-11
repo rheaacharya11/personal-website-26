@@ -1,8 +1,7 @@
 import { notFound } from "next/navigation";
 import { promises as fs } from "fs";
 import path from "path";
-import { remark } from "remark";
-import html from "remark-html";
+import { renderMarkdown } from "@/lib/markdown";
 import { projects } from "../projects";
 
 export function generateStaticParams() {
@@ -24,8 +23,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   let contentHtml = "";
   try {
     const raw = await fs.readFile(filePath, "utf8");
-    const processed = await remark().use(html, { sanitize: false }).process(raw);
-    contentHtml = processed.toString();
+    contentHtml = await renderMarkdown(raw);
   } catch {
     // no markdown file yet
   }

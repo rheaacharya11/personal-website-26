@@ -15,13 +15,10 @@ how might an over-confidence effect impact aspects like education level or incom
 
 To see my methodology & what I learnt, [read the full paper here!](/Final%20Econ%20Confidence%20Paper.pdf) :)
 
-## Thanks
 
-
-<figure>
-  <img src="/Claudia.jpeg" alt="description" style="width: 65%; display: block; margin: 0 auto; border-radius: 6px;" />
+<figure style="text-align:center">
+<img src="/Claudia.jpeg" style="width:65%;display:block;margin:0 auto" />
+<figcaption><em>Getting to write a paper supervised by Claudia Goldin -- an icon who not only won the Nobel Prize and fought for higher WNBA salaries, but is also a sharp and funny mentor -- was one of the most thrilling parts of college for me. Thank you for giving me so much academic & personal advice.</em></figcaption>
 </figure>
 
-<br>
-Getting to write a paper supervised by Claudia Goldin -- an icon who not won the Nobel Prize and fought for higher WNBA salaries, but is also a sharp and funny mentor -- was one of the most thrilling parts of college for me. Thank you for giving me so much academic & personal advice.
 

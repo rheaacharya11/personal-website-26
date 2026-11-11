@@ -3,6 +3,7 @@ import { Inter, Cormorant_Garamond, Space_Mono, DM_Sans, Source_Serif_4 } from "
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
+import "katex/dist/katex.min.css";
 
 const inter = Inter({
   variable: "--font-sans",

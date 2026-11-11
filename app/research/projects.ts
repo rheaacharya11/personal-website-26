@@ -44,6 +44,17 @@ export const projects: Project[] = [
     links: [],
   },
   {
+    slug: "rule-following-under-pressure",
+    title: "Rule-Following Under Pressure in LLM Agents",
+    tagline: "can agents convince each other to break the rules?",
+    description: "LLM agents break a stated network policy far more often when acting through code than through a named tool, and operator personas and peer-agent testimony shift violation rates, in directions that differ across models.",
+    venue: "NAACL",
+    year: "2026",
+    collaborators: ["Jessica Chen"],
+    status: "Under review",
+    links: [],
+  },
+  {
     slug: "fake-it",
     title: "Fake It Till You Make It",
     tagline: "gendered effects of confidence in early education",

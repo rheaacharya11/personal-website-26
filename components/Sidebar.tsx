@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 
 const navLinks = [
   { href: "/", label: "about" },
+  { href: "/work", label: "work" },
+  { href: "/art", label: "art" },
 ];
 
 export default function Sidebar() {

@@ -37,7 +37,7 @@ export default function ExpandingGrid({ items, title }: { items: GridItem[]; tit
     <div className="flex gap-10 items-start">
       {/* Grid — snaps to single column when panel is open, hidden on mobile when open */}
       <div
-        className={`flex-shrink-0 grid gap-3${isOpen ? " hidden md:grid" : ""}`}
+        className={`flex-shrink-0 grid gap-3 justify-items-center${isOpen ? " hidden md:grid" : ""}`}
         style={{
           gridTemplateColumns: isOpen ? "1fr" : "repeat(3, 1fr)",
           width: isOpen ? "150px" : "100%",
@@ -50,7 +50,7 @@ export default function ExpandingGrid({ items, title }: { items: GridItem[]; tit
           <button
             key={item.id}
             onClick={() => toggle(item.id)}
-            className="block text-left w-full cursor-pointer"
+            className="block text-left w-full cursor-pointer aspect-square overflow-hidden"
             style={{
               outline: openId === item.id ? "2px solid var(--foreground)" : "2px solid transparent",
               outlineOffset: "2px",

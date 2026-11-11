@@ -139,7 +139,8 @@ export default async function ResearchPage() {
         >
           Tech
         </h1>
-        <div className="grid grid-cols-3 gap-3 mx-auto" style={{ maxWidth: "42rem" }}>
+        <div className="flex gap-10 items-start">
+        <div className="flex-shrink-0 grid research-grid gap-3 justify-items-center" style={{ gridTemplateColumns: "repeat(3, 1fr)", width: "100%", maxWidth: "42rem", margin: "0 auto" }}>
           {techProjects.map((project, i) => {
             const { bg, text } = techPalette[i % techPalette.length];
             const href = project.links?.[0]?.href;
@@ -149,8 +150,8 @@ export default async function ResearchPage() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="aspect-square flex flex-col justify-between p-3 hover:opacity-80 transition-opacity"
-                style={{ background: bg, display: "flex" }}
+                className="block w-full aspect-square overflow-hidden flex flex-col justify-between p-3 hover:opacity-80 transition-opacity"
+                style={{ background: bg }}
               >
                 <span className="font-mono text-xs" style={{ color: text, opacity: 0.6 }}>
                   {project.year}

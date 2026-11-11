@@ -17,7 +17,7 @@ export default function WritingList({ sections }: { sections: Section[] }) {
       {sections.map((section) => (
         <div key={section.heading}>
           <span
-            className="text-xs tracking-widest uppercase font-normal block mb-2 -ml-6"
+            className="text-xs tracking-widest uppercase font-normal block mb-2 -ml-4 md:-ml-6"
             style={{ fontFamily: "var(--font-sans)", color: section.color }}
           >
             {section.heading}

@@ -37,8 +37,8 @@ export default function AboutPage() {
 
       {/* Blue intro block — col 1 row 1 on desktop, first on mobile */}
       <section
-        className="w-[85%] md:w-full p-8 md:p-16 flex flex-col relative min-h-[360px] md:min-h-[500px]"
-        style={{ color: navy }}
+        className="w-[85%] md:w-full p-8 md:p-16 flex flex-col relative"
+        style={{ color: navy, minHeight: "clamp(420px, 70vw, 500px)" }}
       >
         <div
           className="absolute inset-0 -z-10"
@@ -47,18 +47,18 @@ export default function AboutPage() {
         <p style={{ fontSize: "clamp(1.4rem, 2.5vw, 1.9rem)", lineHeight: 1.3, fontFamily: "DaVinci, var(--font-serif)", fontWeight: 300, letterSpacing: "0.02em" }}>
           With data and design, I make meaning of the world around us. By building products & writing stories, I imagine new ones. Welcome to my studio!
         </p>
-        <div className="flex-1" />
-        <nav className="flex flex-col gap-4" style={{ fontFamily: "var(--font-sans)", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.12em" }}>
+        <div style={{ flex: 0.7 }} />
+        <nav className="flex flex-col gap-1" style={{ fontFamily: "var(--font-sans)", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.12em" }}>
           <a href="/research" className="uppercase hover:opacity-60 transition-opacity">Research & Tech {">>>"}</a>
           <a href="/writing" className="uppercase hover:opacity-60 transition-opacity">Writing {">>>"}</a>
           <a href="/art" className="uppercase hover:opacity-60 transition-opacity">Art {">>>"}</a>
         </nav>
-        <div className="flex-1" />
+        <div className="hidden md:block" style={{ flex: 1 }} />
       </section>
 
       {/* Pink excited block — col-span-2 row 2 on desktop, between blue and CV on mobile */}
       <section
-        className="-mt-16 p-8 text-left md:col-span-2 md:row-start-2 order-2 md:order-none w-[85%] ml-auto md:w-[70%] md:ml-[20%]"
+        className="relative z-10 -mt-12 md:-mt-14 p-8 text-left md:col-span-2 md:row-start-2 order-2 md:order-none w-[85%] ml-auto md:w-[70%] md:ml-[20%]"
         style={{
           background: pink,
           color: "#fff",

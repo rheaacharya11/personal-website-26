@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 type GridItem = {
   id: string;
+  href?: string;
   thumbnail: React.ReactNode;
   thumbnailCollapsed?: React.ReactNode;
   expanded?: React.ReactNode;
@@ -46,22 +47,34 @@ export default function ExpandingGrid({ items, title }: { items: GridItem[]; tit
           transition: "width 0.4s cubic-bezier(0.16, 1, 0.3, 1), max-width 0.4s cubic-bezier(0.16, 1, 0.3, 1), margin 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
         }}
       >
-        {items.map((item) => (
-          <button
-            key={item.id}
-            onClick={() => toggle(item.id)}
-            className="block text-left w-full cursor-pointer aspect-square overflow-hidden"
-            style={{
-              outline: openId === item.id ? "2px solid var(--foreground)" : "2px solid transparent",
-              outlineOffset: "2px",
-              border: "none",
-              background: "none",
-              padding: 0,
-            }}
-          >
-            {isOpen && item.thumbnailCollapsed ? item.thumbnailCollapsed : item.thumbnail}
-          </button>
-        ))}
+        {items.map((item) =>
+          item.href ? (
+            <a
+              key={item.id}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full cursor-pointer aspect-square overflow-hidden hover:opacity-80 transition-opacity"
+            >
+              {item.thumbnail}
+            </a>
+          ) : (
+            <button
+              key={item.id}
+              onClick={() => toggle(item.id)}
+              className="block text-left w-full cursor-pointer aspect-square overflow-hidden"
+              style={{
+                outline: openId === item.id ? "2px solid var(--foreground)" : "2px solid transparent",
+                outlineOffset: "2px",
+                border: "none",
+                background: "none",
+                padding: 0,
+              }}
+            >
+              {isOpen && item.thumbnailCollapsed ? item.thumbnailCollapsed : item.thumbnail}
+            </button>
+          )
+        )}
       </div>
 
       {/* Side panel — slides in from right */}

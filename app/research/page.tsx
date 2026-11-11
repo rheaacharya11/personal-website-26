@@ -129,48 +129,41 @@ export default async function ResearchPage() {
     })
   );
 
+  const techItems = techProjects.map((project, i) => {
+    const { bg, text } = techPalette[i % techPalette.length];
+    return {
+      id: project.slug,
+      href: project.links?.[0]?.href,
+      thumbnail: (
+        <div
+          key={project.slug + "-thumb"}
+          className="aspect-square flex flex-col justify-between p-3"
+          style={{ background: bg }}
+        >
+          <span className="font-mono text-xs" style={{ color: text, opacity: 0.6 }}>
+            {project.year}
+          </span>
+          <div>
+            <p
+              className="text-sm md:text-base leading-snug mb-1"
+              style={{ fontFamily: "DaVinci, var(--font-serif)", fontWeight: 300, color: text }}
+            >
+              {project.title}
+            </p>
+            <p className="font-mono text-[10px] leading-tight" style={{ color: text, opacity: 0.6 }}>
+              {project.tagline}
+            </p>
+          </div>
+        </div>
+      ),
+    };
+  });
+
   return (
     <>
       <ExpandingGrid items={items} title="Research" />
-      <div className="max-w-3xl mx-auto px-4 md:px-0 mt-16">
-        <h1
-          className="text-xs tracking-widest uppercase font-normal mb-6"
-          style={{ fontFamily: "var(--font-sans)", color: "var(--muted)" }}
-        >
-          Tech
-        </h1>
-        <div className="flex gap-10 items-start">
-        <div className="flex-shrink-0 grid research-grid gap-3 justify-items-center" style={{ gridTemplateColumns: "repeat(3, 1fr)", width: "100%", maxWidth: "42rem", margin: "0 auto" }}>
-          {techProjects.map((project, i) => {
-            const { bg, text } = techPalette[i % techPalette.length];
-            const href = project.links?.[0]?.href;
-            return (
-              <a
-                key={project.slug}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full aspect-square overflow-hidden flex flex-col justify-between p-3 hover:opacity-80 transition-opacity"
-                style={{ background: bg }}
-              >
-                <span className="font-mono text-xs" style={{ color: text, opacity: 0.6 }}>
-                  {project.year}
-                </span>
-                <div>
-                  <p
-                    className="text-sm md:text-base leading-snug mb-1"
-                    style={{ fontFamily: "DaVinci, var(--font-serif)", fontWeight: 300, color: text }}
-                  >
-                    {project.title}
-                  </p>
-                  <p className="font-mono text-[10px] leading-tight" style={{ color: text, opacity: 0.6 }}>
-                    {project.tagline}
-                  </p>
-                </div>
-              </a>
-            );
-          })}
-        </div>
+      <div className="mt-16">
+        <ExpandingGrid items={techItems} title="Tech" />
       </div>
     </>
   );

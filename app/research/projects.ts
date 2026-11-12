@@ -55,6 +55,15 @@ export const projects: Project[] = [
     links: [],
   },
   {
+    slug: "predicting-recidivism",
+    title: "Predicting Recidivism",
+    tagline: "markov modeling & mental health",
+    description: "",
+    venue: "",
+    year: "2022",
+    links: [{ label: "pdf", href: "/predicting-recidivism.pdf" }],
+  },
+  {
     slug: "fake-it",
     title: "Fake It Till You Make It",
     tagline: "gendered effects of confidence in early education",
